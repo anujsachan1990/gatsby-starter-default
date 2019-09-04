@@ -5,7 +5,7 @@
 
   [[redirects]]
   from = "/search"
-  to = "https://api.mysearch.com"
+  to = "/page-1"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
