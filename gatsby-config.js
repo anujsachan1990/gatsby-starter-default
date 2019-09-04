@@ -15,6 +15,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-redirect-from`,
+    `gatsby-plugin-meta-redirect`,
     {
       resolve: `gatsby-plugin-netlify`,
     },
