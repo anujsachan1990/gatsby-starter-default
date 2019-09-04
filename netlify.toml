@@ -1,8 +1,4 @@
-# COMMENT: These are two redirect rules with all the fields expanded
-
-
-# COMMENT: This a rule for Single Page Applications
-[[redirects]]
-  from = "/page-2"
-  to = "/page-1"
-  status = 200
+/home              /
+/blog/my-post.php  /blog/my-post
+/page-1              /page-2
+/google            https://www.google.com
