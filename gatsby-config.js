@@ -13,11 +13,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-redirect-from`,
-    `gatsby-plugin-meta-redirect`,
     {
       resolve: `gatsby-plugin-netlify`,
     },
