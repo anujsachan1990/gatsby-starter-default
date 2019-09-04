@@ -9,3 +9,10 @@
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+
+
+  [[redirects]]
+  from = "/*"
+  to = "/page-1"
+  status = 200
