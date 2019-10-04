@@ -6,12 +6,12 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
-        <meta
+        {${isBrowser() && <meta
           property="og:image"
           content={`https://picsum.photos/id/${
-            window.location.search.split("id=")[1]
+            window.location.search.split('id=')[1]
           }/200/200`}
-        ></meta>
+        ></meta>}
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
