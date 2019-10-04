@@ -17,17 +17,12 @@ export default function HTML(props) {
         />
         {props.headComponents}
         <Helmet>
-          {isBrowser() ? (
+          {isBrowser() && (
             <meta
               property="og:image"
               content={`https://picsum.photos/id/${
                 window.location.search.split("id=")[1]
               }/200/200`}
-            ></meta>
-          ) : (
-            <meta
-              property="og:image"
-              content={`https://picsum.photos/id/238/600/600`}
             ></meta>
           )}
         </Helmet>
