@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
 
 export const isBrowser = () => typeof window !== "undefined"
 
@@ -8,20 +9,28 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
-        {isBrowser() && (
-          <meta
-            property="og:image"
-            content={`https://picsum.photos/id/${
-              window.location.search.split("id=")[1]
-            }/200/200`}
-          ></meta>
-        )}
+
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+        <Helmet>
+          {isBrowser() ? (
+            <meta
+              property="og:image"
+              content={`https://picsum.photos/id/${
+                window.location.search.split("id=")[1]
+              }/200/200`}
+            ></meta>
+          ) : (
+            <meta
+              property="og:image"
+              content={`https://picsum.photos/id/238/600/600`}
+            ></meta>
+          )}
+        </Helmet>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
