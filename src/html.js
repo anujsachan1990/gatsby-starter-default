@@ -1,19 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-export const isBrowser = () => typeof window !== 'undefined'
+export const isBrowser = () => typeof window !== "undefined"
 
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
-        {${isBrowser() && <meta
-          property="og:image"
-          content={`https://picsum.photos/id/${
-            window.location.search.split('id=')[1]
-          }/200/200`}
-        ></meta>}
+        {isBrowser() && (
+          <meta
+            property="og:image"
+            content={`https://picsum.photos/id/${
+              window.location.search.split("id=")[1]
+            }/200/200`}
+          ></meta>
+        )}
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
